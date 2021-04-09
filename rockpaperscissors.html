@@ -14,12 +14,12 @@
       <h1>Rock, Paper, Scissors</h1>
 
       <div class="player">
-        <div class="userchoice Rock count-in"></div>
+        <div class="userchoice Rock"></div>
         <p>Player 1</p>
       </div>
 
       <div class="player">
-        <div class="computerchoice Rock count-in"></div>
+        <div class="computerchoice Rock"></div>
         <p>Computer</p>
       </div>
 
@@ -35,6 +35,13 @@
         result = document.querySelectorAll(".result"),
         userchoice,
         winsStates = ["Rock", "Paper", "Scissors"];
+
+      startbutton.addEventListener("click", function () {
+        this.disabled = true;
+        result.innerHTML = "";
+        user.className = "userchoice Rock count-in";
+        computer.className = "computerchoice Rock count-in";
+      });
     </script>
   </body>
 </html>
