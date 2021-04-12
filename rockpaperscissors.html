@@ -42,6 +42,14 @@
         user.className = "userchoice Rock count-in";
         computer.className = "computerchoice Rock count-in";
       });
+
+      document.addEventListener("animationend", function () {
+        startbutton.disabled = false;
+        var computerchoice = winsStates[Math.floor(Math.random() * 3)];
+        var userchoice = winsStates[Math.floor(Math.random() * 3)];
+        user.className = "userchoice " + userchoice;
+        computer.className = "computerchoice " + computerchoice;
+      });
     </script>
   </body>
 </html>
