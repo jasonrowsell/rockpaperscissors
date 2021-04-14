@@ -32,9 +32,9 @@
       var user = document.querySelector(".userchoice"),
         computer = document.querySelector(".computerchoice"),
         startbutton = document.querySelector(".startbutton"),
-        result = document.querySelectorAll(".result"),
+        result = document.querySelector(".result"),
         userchoice,
-        winsStates = ["Rock", "Paper", "Scissors"];
+        winsStates = { Rock: "Scissors", Paper: "Rock", Scissors: "Paper" };
 
       startbutton.addEventListener("click", function () {
         this.disabled = true;
@@ -45,11 +45,25 @@
 
       document.addEventListener("animationend", function () {
         startbutton.disabled = false;
-        var computerchoice = winsStates[Math.floor(Math.random() * 3)];
-        var userchoice = winsStates[Math.floor(Math.random() * 3)];
+        var computerchoice = getRandomChoice();
+        var userchoice = getRandomChoice();
         user.className = "userchoice " + userchoice;
         computer.className = "computerchoice " + computerchoice;
+        result.innerHTML = getWinner(userchoice, computerchoice);
       });
+
+      function getRandomChoice() {
+        return Object.keys(winsStates)[Math.floor(Math.random() * 3)];
+      }
+
+      function getWinner(userchoice, computerchoice) {
+        if (userchoice === computerchoice) {
+          return "A tie.";
+        } else if (userchoice === winsStates[computerchoice]) {
+          return "Computer Wins! " + computerchoice + " beats " + userchoice;
+        }
+        return "You Win! " + userchoice + " beats " + computerchoice;
+      }
     </script>
   </body>
 </html>
