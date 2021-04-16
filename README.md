@@ -6,7 +6,7 @@ A simple game of Rock, Paper, Scissors played against an AI opponent.
 
 ## Getting started
 
-You can play the game [here](https://jasonrowsell-rps.herokuapp.com/)
+You can play the game [here.](https://jasonrowsell-rps.herokuapp.com/)
 
 Or to run locally:
 
