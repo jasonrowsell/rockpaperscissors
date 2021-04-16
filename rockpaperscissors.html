@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Rock Paper Scissors</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -26,6 +30,12 @@
       <div class="result"></div>
 
       <button class="startbutton">Play</button>
+      <footer>
+        <p>
+          Jason Rowsell<br />
+          <a href="https://github.com/jasonrowsell">Github</a>
+        </p>
+      </footer>
     </div>
 
     <script>
@@ -62,7 +72,6 @@
         user.className = "userchoice " + userchoice;
         computer.className = "computerchoice " + computerchoice;
         result.innerHTML = getWinner(userchoice, computerchoice);
-        userchoice = "";
       });
 
       function getRandomChoice() {

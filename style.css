@@ -10,15 +10,26 @@
   }
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+  background-attachment: fixed;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 6);
+  color: white;
+  display: flex;
+  align-items: center;
+}
 .count-in {
   animation: 0.7s count-in 3;
 }
 
 .container {
+  background-color: rgba(255, 255, 255, 0.2);
   width: 650px;
   margin: 0 auto;
   text-align: center;
   padding: 25px;
+  border-radius: 2rem;
 }
 
 .player {
@@ -57,7 +68,34 @@
 }
 
 .startbutton {
+  background-color: rgba(102, 0, 102, 0.3);
   border: none;
   padding: 10px 100px;
-  font-weight: 650;
+  font-weight: 450;
+  font-size: 20px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 2rem;
+}
+.startbutton:disabled {
+  background-color: rgba(102, 0, 102, 0.1);
+  font-weight: 450;
+  font-size: 20px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.2);
+  border-radius: 2rem;
+}
+
+.result {
+  margin-bottom: 25px;
+  font-weight: 700;
+  height: 50px;
+  font-size: 2em;
+}
+
+footer {
+  font-weight: 200;
+  font-size: 15px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.6);
 }
