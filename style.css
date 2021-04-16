@@ -13,7 +13,6 @@
 body {
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
-  background-attachment: fixed;
   text-shadow: 0 0 8px rgba(0, 0, 0, 6);
   color: white;
   display: flex;
@@ -49,15 +48,15 @@ body {
 }
 
 .Rock {
-  background-image: url("rock.png");
+  background-image: url("images/rock.png");
 }
 
 .Paper {
-  background-image: url("paper.png");
+  background-image: url("images/paper.png");
 }
 
 .Scissors {
-  background-image: url("scissors.png");
+  background-image: url("images/scissors.png");
 }
 
 .Rock,
