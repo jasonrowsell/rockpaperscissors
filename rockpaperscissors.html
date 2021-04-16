@@ -43,13 +43,26 @@
         computer.className = "computerchoice Rock count-in";
       });
 
+      document.addEventListener("keydown", function (event) {
+        if (event.keyCode === 82) {
+          userchoice = "Rock";
+        } else if (event.keyCode === 80) {
+          userchoice = "Paper";
+        } else {
+          userchoice = "Scissors";
+        }
+      });
+
       document.addEventListener("animationend", function () {
+        if (!userchoice) {
+          userchoice = getRandomChoice();
+        }
         startbutton.disabled = false;
         var computerchoice = getRandomChoice();
-        var userchoice = getRandomChoice();
         user.className = "userchoice " + userchoice;
         computer.className = "computerchoice " + computerchoice;
         result.innerHTML = getWinner(userchoice, computerchoice);
+        userchoice = "";
       });
 
       function getRandomChoice() {
